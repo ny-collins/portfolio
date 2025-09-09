@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Collins Mwangi | Web Developer & Data Science Student</title>
+    <title>Collins Mwangi | Developer & Data Science Student</title>
+    <link rel="icon" type="image/png" href="profile-picture.png">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -123,6 +124,7 @@
             <a href="#" class="text-2xl font-bold text-white">CM.</a>
             <div class="hidden md:flex items-center space-x-8">
                 <a href="#about" class="nav-link text-slate-300 hover:text-sky-400 transition-colors duration-300">About</a>
+                <a href="#experience" class="nav-link text-slate-300 hover:text-sky-400 transition-colors duration-300">Experience</a>
                 <a href="#skills" class="nav-link text-slate-300 hover:text-sky-400 transition-colors duration-300">Skills</a>
                 <a href="#projects" class="nav-link text-slate-300 hover:text-sky-400 transition-colors duration-300">Projects</a>
                 <a href="#contact" class="nav-link text-slate-300 hover:text-sky-400 transition-colors duration-300">Contact</a>
@@ -135,6 +137,7 @@
         <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden md:hidden bg-slate-900/80 backdrop-blur-sm">
             <a href="#about" class="block text-center py-3 px-4 text-sm text-slate-200 hover:bg-slate-700/50">About</a>
+            <a href="#experience" class="block text-center py-3 px-4 text-sm text-slate-200 hover:bg-slate-700/50">Experience</a>
             <a href="#skills" class="block text-center py-3 px-4 text-sm text-slate-200 hover:bg-slate-700/50">Skills</a>
             <a href="#projects" class="block text-center py-3 px-4 text-sm text-slate-200 hover:bg-slate-700/50">Projects</a>
             <a href="#contact" class="block text-center py-3 px-4 text-sm text-slate-200 hover:bg-slate-700/50">Contact</a>
@@ -150,13 +153,13 @@
                     Collins Mwangi
                 </h1>
                 <p class="text-lg md:text-2xl text-sky-300 font-medium">
-                    Web Developer & Data Science Student
+                    Software Engineering & Fintech Enthusiast
                 </p>
                 <div class="mt-8 flex justify-center gap-4">
                     <a href="#projects" class="bg-sky-500 hover:bg-sky-600 text-white font-bold py-3 px-6 rounded-lg transition-transform duration-300 transform hover:scale-105">
                         View My Work
                     </a>
-                    <a href="mailto:collins.mwangi.dev@example.com" class="bg-slate-700 hover:bg-slate-600 text-white font-bold py-3 px-6 rounded-lg transition-transform duration-300 transform hover:scale-105">
+                    <a href="mailto:mwangicollins391@gmail.com" class="bg-slate-700 hover:bg-slate-600 text-white font-bold py-3 px-6 rounded-lg transition-transform duration-300 transform hover:scale-105">
                         Get In Touch
                     </a>
                 </div>
@@ -167,82 +170,88 @@
         <section id="about" class="py-20 md:py-32">
             <div class="reveal max-w-4xl mx-auto grid md:grid-cols-3 gap-12 items-center">
                 <div class="md:col-span-1">
-                    <img src="https://placehold.co/400x400/0f172a/38bdf8?text=CM" alt="Collins Mwangi" class="rounded-full shadow-lg border-4 border-slate-700 mx-auto">
+                    <img src="profile-picture.png" alt="Collins Mwangi" class="rounded-full shadow-lg border-4 border-slate-700 mx-auto" onerror="this.onerror=null;this.src='https://placehold.co/400x400/0f172a/38bdf8?text=CM';">
                 </div>
                 <div class="md:col-span-2 text-center md:text-left">
                     <h2 class="text-3xl md:text-4xl font-bold mb-4 text-sky-400">About Me</h2>
                     <p class="text-slate-400 leading-relaxed mb-4">
-                        Hello! I'm Collins, a passionate web developer with a keen eye for modern design and user experience. My journey in tech is driven by a desire to build things that are not only functional but also beautiful and intuitive.
+                        A Data Science student at the University of Nairobi with strong interests in software engineering and fintech. I'm passionate about coding, mathematics, and applying data-driven problem-solving to real-world fintech challenges.
                     </p>
                     <p class="text-slate-400 leading-relaxed">
-                        Currently, I'm expanding my horizons by pursuing a <span class="font-semibold text-sky-400">B.Sc. in Data Science at the University of Nairobi</span>, where I'm learning to uncover insights and stories hidden within data. This unique combination of skills allows me to bridge the gap between creative development and data-driven decisions.
+                       My hands-on experience is grounded in building full-stack applications and configuring ISP systems, constantly seeking to bridge the gap between robust engineering and insightful data analysis.
                     </p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Experience Section -->
+        <section id="experience" class="py-20 md:py-32 bg-slate-900/50 rounded-2xl">
+            <div class="reveal max-w-4xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center text-sky-400">Professional Experience</h2>
+                <div class="relative border-l-2 border-slate-700 ml-6 md:ml-0">
+                    <!-- Timeline Item -->
+                    <div class="mb-10 ml-8">
+                        <span class="absolute flex items-center justify-center w-6 h-6 bg-sky-500 rounded-full -left-3 ring-8 ring-slate-900">
+                           <i data-lucide="briefcase" class="w-4 h-4 text-white"></i>
+                        </span>
+                        <h3 class="flex items-center mb-1 text-lg font-semibold text-white">Intern - Swiftel Fibre (ISP)</h3>
+                        <time class="block mb-2 text-sm font-normal leading-none text-slate-500">April 2025 - August 2025</time>
+                        <ul class="list-disc list-inside mt-4 text-slate-400 space-y-2">
+                            <li>Configured MikroTik CCR & RB routers and set up PPPoE accounts for clients.</li>
+                            <li>Built and deployed a full-stack Request-Handler web app (React, Node.js, MySQL) to streamline internal company requests.</li>
+                            <li>Collaborated with customer support to resolve service issues, improving client satisfaction.</li>
+                            <li>Supported online marketing campaigns, demonstrating adaptability beyond core technical tasks.</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </section>
 
         <!-- Skills Section -->
-        <section id="skills" class="py-20 md:py-32 bg-slate-900/50 rounded-2xl">
-            <div class="reveal text-center max-w-4xl mx-auto">
+        <section id="skills" class="py-20 md:py-32">
+            <div class="reveal text-center max-w-6xl mx-auto">
                 <h2 class="text-3xl md:text-4xl font-bold mb-12 text-sky-400">My Tech Stack</h2>
-                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-8">
-                    <!-- Example Skills -->
-                    <div class="flex flex-col items-center p-4" data-tooltip="HTML5">
-                        <i data-lucide="file-code-2" class="w-16 h-16 text-orange-500"></i>
-                        <span class="mt-2 text-sm font-medium">HTML5</span>
-                    </div>
-                    <div class="flex flex-col items-center p-4" data-tooltip="CSS3">
-                        <i data-lucide="paint-bucket" class="w-16 h-16 text-blue-500"></i>
-                        <span class="mt-2 text-sm font-medium">CSS3</span>
-                    </div>
-                    <div class="flex flex-col items-center p-4" data-tooltip="JavaScript">
-                        <i data-lucide="braces" class="w-16 h-16 text-yellow-400"></i>
-                        <span class="mt-2 text-sm font-medium">JavaScript</span>
-                    </div>
-                     <div class="flex flex-col items-center p-4" data-tooltip="Node.js">
-                        <i data-lucide="server" class="w-16 h-16 text-green-500"></i>
-                        <span class="mt-2 text-sm font-medium">Node.js</span>
-                    </div>
-                     <div class="flex flex-col items-center p-4" data-tooltip="React">
-                        <i data-lucide="atom" class="w-16 h-16 text-sky-400"></i>
-                        <span class="mt-2 text-sm font-medium">React</span>
-                    </div>
-                     <div class="flex flex-col items-center p-4" data-tooltip="MongoDB">
-                        <i data-lucide="database" class="w-16 h-16 text-green-400"></i>
-                        <span class="mt-2 text-sm font-medium">MongoDB</span>
-                    </div>
-                     <div class="flex flex-col items-center p-4" data-tooltip="Python">
-                        <i data-lucide="code" class="w-16 h-16 text-blue-400"></i>
-                        <span class="mt-2 text-sm font-medium">Python</span>
-                    </div>
-                    <div class="flex flex-col items-center p-4" data-tooltip="Git & GitHub">
-                        <i data-lucide="git-branch-plus" class="w-16 h-16 text-slate-300"></i>
-                        <span class="mt-2 text-sm font-medium">Git & GitHub</span>
-                    </div>
-                    <div class="flex flex-col items-center p-4" data-tooltip="Data Analysis">
-                        <i data-lucide="bar-chart-3" class="w-16 h-16 text-purple-400"></i>
-                        <span class="mt-2 text-sm font-medium">Data Analysis</span>
-                    </div>
-                     <div class="flex flex-col items-center p-4" data-tooltip="Tailwind CSS">
-                        <i data-lucide="wind" class="w-16 h-16 text-cyan-400"></i>
-                        <span class="mt-2 text-sm font-medium">Tailwind CSS</span>
-                    </div>
+                <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-8">
+                    <div class="flex flex-col items-center" data-tooltip="HTML5"><i data-lucide="file-code-2" class="w-12 h-12 text-orange-500"></i><span class="mt-2 text-xs">HTML5</span></div>
+                    <div class="flex flex-col items-center" data-tooltip="CSS3"><i data-lucide="paint-bucket" class="w-12 h-12 text-blue-500"></i><span class="mt-2 text-xs">CSS3</span></div>
+                    <div class="flex flex-col items-center" data-tooltip="JavaScript"><i data-lucide="braces" class="w-12 h-12 text-yellow-400"></i><span class="mt-2 text-xs">JavaScript</span></div>
+                    <div class="flex flex-col items-center" data-tooltip="TypeScript"><i data-lucide="file-type-2" class="w-12 h-12 text-blue-400"></i><span class="mt-2 text-xs">TypeScript</span></div>
+                    <div class="flex flex-col items-center" data-tooltip="Python"><i data-lucide="code" class="w-12 h-12 text-yellow-500"></i><span class="mt-2 text-xs">Python</span></div>
+                    <div class="flex flex-col items-center" data-tooltip="PHP"><i data-lucide="file-code" class="w-12 h-12 text-indigo-400"></i><span class="mt-2 text-xs">PHP</span></div>
+                    <div class="flex flex-col items-center" data-tooltip="Node.js"><i data-lucide="server" class="w-12 h-12 text-green-500"></i><span class="mt-2 text-xs">Node.js</span></div>
+                    <div class="flex flex-col items-center" data-tooltip="Express.js"><i data-lucide="webhook" class="w-12 h-12 text-slate-400"></i><span class="mt-2 text-xs">Express.js</span></div>
+                    <div class="flex flex-col items-center" data-tooltip="React"><i data-lucide="atom" class="w-12 h-12 text-sky-400"></i><span class="mt-2 text-xs">React</span></div>
+                    <div class="flex flex-col items-center" data-tooltip="Laravel"><i data-lucide="folder-git-2" class="w-12 h-12 text-red-500"></i><span class="mt-2 text-xs">Laravel</span></div>
+                    <div class="flex flex-col items-center" data-tooltip="MySQL"><i data-lucide="database" class="w-12 h-12 text-cyan-500"></i><span class="mt-2 text-xs">MySQL</span></div>
+                    <div class="flex flex-col items-center" data-tooltip="PostgreSQL"><i data-lucide="database" class="w-12 h-12 text-blue-600"></i><span class="mt-2 text-xs">PostgreSQL</span></div>
+                    <div class="flex flex-col items-center" data-tooltip="MongoDB"><i data-lucide="database" class="w-12 h-12 text-green-400"></i><span class="mt-2 text-xs">MongoDB</span></div>
+                    <div class="flex flex-col items-center" data-tooltip="Firebase"><i data-lucide="flame" class="w-12 h-12 text-amber-500"></i><span class="mt-2 text-xs">Firebase</span></div>
+                    <div class="flex flex-col items-center" data-tooltip="Git"><i data-lucide="git-branch" class="w-12 h-12 text-red-600"></i><span class="mt-2 text-xs">Git</span></div>
+                    <div class="flex flex-col items-center" data-tooltip="GitHub"><i data-lucide="github" class="w-12 h-12 text-slate-300"></i><span class="mt-2 text-xs">GitHub</span></div>
+                    <div class="flex flex-col items-center" data-tooltip="AWS"><i data-lucide="cloud" class="w-12 h-12 text-orange-400"></i><span class="mt-2 text-xs">AWS</span></div>
+                    <div class="flex flex-col items-center" data-tooltip="Google Cloud"><i data-lucide="cloudy" class="w-12 h-12 text-blue-400"></i><span class="mt-2 text-xs">Google Cloud</span></div>
+                    <div class="flex flex-col items-center" data-tooltip="Render"><i data-lucide="server-cog" class="w-12 h-12 text-teal-400"></i><span class="mt-2 text-xs">Render</span></div>
+                    <div class="flex flex-col items-center" data-tooltip="Netlify"><i data-lucide="triangle" class="w-12 h-12 text-cyan-300"></i><span class="mt-2 text-xs">Netlify</span></div>
+                    <div class="flex flex-col items-center" data-tooltip="Nginx"><i data-lucide="server-crash" class="w-12 h-12 text-green-600"></i><span class="mt-2 text-xs">Nginx</span></div>
+                    <div class="flex flex-col items-center" data-tooltip="Postman"><i data-lucide="send" class="w-12 h-12 text-orange-500"></i><span class="mt-2 text-xs">Postman</span></div>
+                    <div class="flex flex-col items-center" data-tooltip="Bash Script"><i data-lucide="terminal" class="w-12 h-12 text-slate-200"></i><span class="mt-2 text-xs">Bash</span></div>
+                    <div class="flex flex-col items-center" data-tooltip="NPM"><i data-lucide="package" class="w-12 h-12 text-red-500"></i><span class="mt-2 text-xs">NPM</span></div>
                 </div>
             </div>
         </section>
 
         <!-- Projects Section -->
-        <section id="projects" class="py-20 md:py-32">
-            <div class="reveal text-center">
+        <section id="projects" class="py-20 md:py-32 bg-slate-900/50 rounded-2xl">
+            <div class="reveal text-center max-w-5xl mx-auto">
                 <h2 class="text-3xl md:text-4xl font-bold mb-12 text-sky-400">Featured Projects</h2>
                 <div class="grid md:grid-cols-2 gap-8 lg:gap-12">
                     
                     <!-- Project Card 1 -->
                     <div class="group glass-effect rounded-xl overflow-hidden transform transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-sky-500/10">
-                        <img src="https://placehold.co/600x400/0f172a/e2e8f0?text=Request+Handler" alt="Request Handler Web App" class="w-full h-56 object-cover group-hover:opacity-75 transition-opacity duration-300">
+                        <img src="request-handler.png" alt="Request Handler Web App" class="w-full h-56 object-cover group-hover:opacity-75 transition-opacity duration-300" onerror="this.onerror=null;this.src='https://placehold.co/600x400/0f172a/e2e8f0?text=Request+Handler';">
                         <div class="p-6">
-                            <h3 class="text-xl font-bold mb-2">Request Handler Web App</h3>
-                            <p class="text-slate-400 mb-4 text-sm">A full-stack application for managing and handling incoming web requests. Built with a robust backend.</p>
+                            <h3 class="text-xl font-bold mb-2">Request-Handler System</h3>
+                            <p class="text-slate-400 mb-4 text-sm">Full-stack internal request management system. Tech: React (TS), Node.js (TS), MySQL.</p>
                             <a href="https://request-handler.up.railway.app" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-sky-400 font-semibold hover:text-sky-300">
                                 View Live Site <i data-lucide="arrow-up-right" class="w-4 h-4 ml-1"></i>
                             </a>
@@ -251,10 +260,10 @@
 
                     <!-- Project Card 2 -->
                     <div class="group glass-effect rounded-xl overflow-hidden transform transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-sky-500/10">
-                        <img src="https://placehold.co/600x400/0f172a/e2e8f0?text=E-commerce" alt="E-commerce Platform" class="w-full h-56 object-cover group-hover:opacity-75 transition-opacity duration-300">
+                        <img src="e-commerce.png" alt="E-commerce Platform" class="w-full h-56 object-cover group-hover:opacity-75 transition-opacity duration-300" onerror="this.onerror=null;this.src='https://placehold.co/600x400/0f172a/e2e8f0?text=E-commerce';">
                         <div class="p-6">
-                            <h3 class="text-xl font-bold mb-2">E-commerce Platform</h3>
-                            <p class="text-slate-400 mb-4 text-sm">A front-end prototype for an e-commerce website, showcasing product displays and a clean user interface.</p>
+                            <h3 class="text-xl font-bold mb-2">TechHaven E-commerce Site</h3>
+                            <p class="text-slate-400 mb-4 text-sm">Static web store with a cart system using localStorage. Built with HTML, CSS, and vanilla JS.</p>
                             <a href="https://ny-collins.github.io" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-sky-400 font-semibold hover:text-sky-300">
                                 View Live Site <i data-lucide="arrow-up-right" class="w-4 h-4 ml-1"></i>
                             </a>
@@ -263,7 +272,7 @@
                     
                     <!-- Project Card 3 -->
                     <div class="group glass-effect rounded-xl overflow-hidden transform transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-sky-500/10">
-                        <img src="https://placehold.co/600x400/0f172a/e2e8f0?text=ISP+Website" alt="ISP Website" class="w-full h-56 object-cover group-hover:opacity-75 transition-opacity duration-300">
+                        <img src="isp-website.png" alt="ISP Website" class="w-full h-56 object-cover group-hover:opacity-75 transition-opacity duration-300" onerror="this.onerror=null;this.src='https://placehold.co/600x400/0f172a/e2e8f0?text=ISP+Website';">
                         <div class="p-6">
                             <h3 class="text-xl font-bold mb-2">ISP Website</h3>
                             <p class="text-slate-400 mb-4 text-sm">A mock website for an Internet Service Provider, designed to be modern, professional, and informative.</p>
@@ -275,7 +284,7 @@
 
                     <!-- Project Card 4 -->
                     <div class="group glass-effect rounded-xl overflow-hidden transform transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-sky-500/10">
-                        <img src="https://placehold.co/600x400/0f172a/e2e8f0?text=MongoDB+API" alt="MongoDB Practice" class="w-full h-56 object-cover group-hover:opacity-75 transition-opacity duration-300">
+                        <img src="mongodb-api-practice.png" alt="MongoDB Practice" class="w-full h-56 object-cover group-hover:opacity-75 transition-opacity duration-300" onerror="this.onerror=null;this.src='https://placehold.co/600x400/0f172a/e2e8f0?text=MongoDB+API';">
                         <div class="p-6">
                             <h3 class="text-xl font-bold mb-2">MongoDB API Practice</h3>
                             <p class="text-slate-400 mb-4 text-sm">A practical API project demonstrating database operations and backend logic using MongoDB.</p>
@@ -296,18 +305,21 @@
                 <p class="text-slate-400 mb-8">
                     I'm always open to discussing new projects, creative ideas, or opportunities to be part of an amazing team. Feel free to reach out!
                 </p>
-                <a href="mailto:collins.mwangi.dev@example.com" class="bg-sky-500 hover:bg-sky-600 text-white font-bold py-4 px-8 rounded-lg transition-transform duration-300 transform hover:scale-105 inline-block mb-12">
+                <a href="mailto:mwangicollins391@gmail.com" class="bg-sky-500 hover:bg-sky-600 text-white font-bold py-4 px-8 rounded-lg transition-transform duration-300 transform hover:scale-105 inline-block mb-12">
                     Say Hello
                 </a>
                 <div class="flex justify-center space-x-6">
                     <a href="https://github.com/ny-collins" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-white transition-colors" aria-label="GitHub">
                         <i data-lucide="github" class="w-8 h-8"></i>
                     </a>
-                    <a href="#" class="text-slate-400 hover:text-white transition-colors" aria-label="LinkedIn">
-                        <i data-lucide="linkedin" class="w-8 h-8"></i>
-                    </a>
-                    <a href="#" class="text-slate-400 hover:text-white transition-colors" aria-label="Twitter">
+                    <a href="https://x.com/CollinsMwa206" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-white transition-colors" aria-label="X / Twitter">
                         <i data-lucide="twitter" class="w-8 h-8"></i>
+                    </a>
+                    <a href="https://instagram.com/collinsmwangi206" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-white transition-colors" aria-label="Instagram">
+                        <i data-lucide="instagram" class="w-8 h-8"></i>
+                    </a>
+                     <a href="https://facebook.com/collinsmwangi206" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-white transition-colors" aria-label="Facebook">
+                        <i data-lucide="facebook" class="w-8 h-8"></i>
                     </a>
                 </div>
             </div>
