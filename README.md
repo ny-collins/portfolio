@@ -57,9 +57,9 @@ This is the repository for my personal portfolio website, built to showcase my s
 ### ## Running Locally (Production Mode)
 
 To preview the site exactly as it would appear when deployed, run the `start` script.
-	```bash
-	npm start
-	```
+```bash
+npm start
+```
 This will start a local web server, and you can view the site at the URL provided in your terminal (usually `http://localhost:3000`).
 
 ### ## Deployment
