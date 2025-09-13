@@ -35,7 +35,7 @@ This is the repository for my personal portfolio website, built to showcase my s
 
 1.  Clone the repository:
     ```bash
-    git clone [https://github.com/ny-collins/portfolio.git](https://github.com/ny-collins/portfolio.git)
+    git clone https://github.com/ny-collins/portfolio.git
     ```
 2.  Navigate to the project directory:
     ```bash
