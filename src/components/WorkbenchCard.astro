@@ -8,36 +8,45 @@ interface Props {
 const { project } = Astro.props;
 const { slug, data } = project;
 ---
-<a 
-  href={`/workbench/${slug}`} 
-  class="block bg-slate-50 dark:bg-slate-800 rounded-2xl shadow-md hover:shadow-xl dark:hover:shadow-blue-500/20 transition-all duration-300 overflow-hidden group border border-slate-200 dark:border-slate-700"
+
+<a
+  href={`/workbench/${slug}`}
+  class="group block bg-white dark:bg-slate-800 rounded-2xl shadow-lg hover:shadow-2xl dark:shadow-blue-500/10 dark:hover:shadow-blue-500/20 transition-all duration-500 overflow-hidden border border-slate-200 dark:border-slate-700 hover:border-blue-300 dark:hover:border-blue-600 hover:-translate-y-2"
 >
-  <div class="overflow-hidden">
+  <div class="relative overflow-hidden">
     <img
       src={data.heroImage}
       alt={`Screenshot of ${data.title}`}
-      class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+      class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-700"
       transition:name={`hero-${slug}`}
     />
+    <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
   </div>
 
   <div class="p-6">
-    <h3 
-      class="text-2xl font-bold text-slate-900 dark:text-white mb-2"
+    <h3
+      class="text-2xl font-bold text-slate-900 dark:text-white mb-3 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300"
       transition:name={`title-${slug}`}
     >
       {data.title}
     </h3>
-    <p class="text-lg text-slate-600 dark:text-slate-300 mb-4">
+    <p class="text-slate-600 dark:text-slate-300 mb-4 leading-relaxed">
       {data.subtitle}
     </p>
 
-    <div class="flex flex-wrap gap-2">
+    <div class="flex flex-wrap gap-2 mb-4">
       {data.techStack.map((tech) => (
-        <span class="text-xs font-medium bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200 py-1 px-3 rounded-full">
+        <span class="px-3 py-1 bg-blue-50 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 text-xs font-medium rounded-full border border-blue-200 dark:border-blue-800">
           {tech}
         </span>
       ))}
+    </div>
+
+    <div class="flex items-center text-blue-600 dark:text-blue-400 font-medium group-hover:text-blue-700 dark:group-hover:text-blue-300 transition-colors duration-300">
+      <span>View Project</span>
+      <svg class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+      </svg>
     </div>
   </div>
 </a>

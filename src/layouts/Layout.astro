@@ -35,15 +35,10 @@ const { title, description = "Collins' Digital Workbench" } = Astro.props;
   						document.documentElement.classList.remove('dark');
   					}
   				}
-  				
-  				// Apply immediately and repeatedly during transitions
   				applyTheme();
-  				
-  				// Aggressive theme application during navigation
   				const events = ['astro:before-swap', 'astro:after-swap', 'astro:page-load'];
   				events.forEach(event => {
   					document.addEventListener(event, () => {
-  						// Apply multiple times with different timings
   						applyTheme();
   						requestAnimationFrame(applyTheme);
   						setTimeout(applyTheme, 0);
@@ -51,8 +46,6 @@ const { title, description = "Collins' Digital Workbench" } = Astro.props;
   						setTimeout(applyTheme, 50);
   					});
   				});
-  				
-  				// Continuous monitoring during transitions
   				let monitoring = false;
   				document.addEventListener('astro:before-swap', () => {
   					if (monitoring) return;
