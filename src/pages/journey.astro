@@ -1,0 +1,71 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { slide } from 'astro:transitions';
+---
+<Layout title="My Journey :: Collins">
+  <main 
+    class="max-w-3xl mx-auto p-8"
+    transition:animate={slide({ duration: '0.3s' })}
+  >
+    <h1 class="text-5xl font-bold mb-4">My Learning Journey</h1>
+    <p class="text-xl text-slate-600 dark:text-slate-300 mb-12">
+      I believe in the "π-shaped" developer model: broad knowledge of systems combined with deep expertise in specific crafts. This is my map.
+    </p>
+
+    <section class="mb-16">
+      <h2 class="text-3xl font-bold mb-6 border-l-4 border-purple-500 pl-4">
+        The Horizontal Bar: My "Systems" Exploration
+      </h2>
+      <p class="text-lg text-slate-700 dark:text-slate-300 mb-6">
+        This is the curiosity that drives me. I explore the "why" and the "environment" that our code lives in.
+      </p>
+      <div class="flex flex-wrap gap-3">
+        <span class="skill-tag">Systems Architecture</span>
+        <span class="skill-tag">Networking Fundamentals</span>
+        <span class="skill-tag">Local-First & PWA</span>
+        <span class="skill-tag">Observability (Logging & Metrics)</span>
+        <span class="skill-tag">Containerization (Docker)</span>
+        <span class="skill-tag">CI/CD Automation</span>
+        <span class="skill-tag">Modern Auth (WebAuthn)</span>
+        <span class="skill-tag">Performance Optimization</span>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="text-3xl font-bold mb-6 border-l-4 border-blue-500 pl-4">
+        The Vertical Legs: My "Craftsman" Focus
+      </h2>
+      <p class="text-lg text-slate-700 dark:text-slate-300 mb-6">
+        This is my current curriculum. I'm taking a focused pause to build deep, foundational expertise in these specific areas.
+      </p>
+      <ul class="space-y-4">
+        <li class="craft-item">
+          <strong class="font-semibold">Advanced JavaScript & TypeScript:</strong>
+          Mastering the language from the ground up, including asynchronous patterns, memory management, and the event loop.
+        </li>
+        <li class="craft-item">
+          <strong class="font-semibold">Data Structures & Algorithms:</strong>
+          Moving beyond "vibe-architecting" to write code that is provably efficient and correct.
+        </li>
+        <li class="craft-item">
+          <strong class="font-semibold">Production-Grade Node.js:</strong>
+          Re-building my backends from scratch to deeply understand concurrency, streaming, and security best practices.
+        </li>
+        <li class="craft-item">
+          <strong class="font-semibold">UI/UX Principles & Design Systems:</strong>
+          Learning the formal rules of design, typography, and interaction to make my personal projects (like Curiosity) as beautiful as they are functional.
+        </li>
+      </ul>
+    </section>
+  </main>
+</Layout>
+
+<style>
+  .skill-tag {
+    @apply text-base font-medium bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-200 py-2 px-4 rounded-full;
+  }
+  
+  .craft-item {
+    @apply p-6 bg-slate-50 dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700;
+  }
+</style>

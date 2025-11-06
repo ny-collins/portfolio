@@ -1,0 +1,60 @@
+{
+  "$ref": "#/definitions/workbench",
+  "definitions": {
+    "workbench": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string"
+        },
+        "subtitle": {
+          "type": "string"
+        },
+        "order": {
+          "type": "number"
+        },
+        "repoUrl": {
+          "type": "string",
+          "format": "uri"
+        },
+        "liveUrl": {
+          "type": "string",
+          "format": "uri"
+        },
+        "heroImage": {
+          "type": "string"
+        },
+        "techStack": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "theSpark": {
+          "type": "string"
+        },
+        "keyInsights": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "$schema": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "title",
+        "subtitle",
+        "order",
+        "repoUrl",
+        "heroImage",
+        "techStack",
+        "theSpark",
+        "keyInsights"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "$schema": "http://json-schema.org/draft-07/schema#"
+}

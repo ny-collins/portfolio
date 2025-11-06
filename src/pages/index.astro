@@ -1,0 +1,43 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Collins :: Digital Workbench">
+  <main class="max-w-3xl mx-auto p-8">
+    
+    <section class="text-center my-16">
+      <h1 class="text-5xl md:text-7xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-6">
+        Systems Explorer.
+      </h1>
+      
+      <p class="text-xl md:text-2xl text-slate-600 dark:text-slate-300 max-w-2xl mx-auto">
+        I'm a developer building a map of the web, from production backends to modern, local-first PWAs. This is my digital workbench.
+      </p>
+    </section>
+
+    <div class="prose prose-lg dark:prose-invert max-w-none space-y-4 text-lg text-slate-700 dark:text-slate-300">
+      <p>
+        My curiosity has always pushed me past the "how" and into the "why." I'm driven to understand the full system, not just a single part.
+      </p>
+      <p>
+        This site archives that journey of exploration. It's not a gallery of "finished" products, but a ledger of experiments, "chain-reactions," and the key insights I've gathered while building with modern tools.
+      </p>
+    </div>
+
+    <div class="mt-16 flex justify-center gap-6">
+      <a 
+        href="/workbench" 
+        class="text-lg font-semibold py-3 px-8 bg-blue-600 text-white rounded-full shadow-lg hover:shadow-blue-500/50 hover:scale-105 transition-all"
+      >
+        View My Workbench &rarr;
+      </a>
+      <a 
+        href="/journey" 
+        class="text-lg font-semibold py-3 px-8 bg-slate-200 text-slate-800 dark:bg-slate-700 dark:text-slate-200 rounded-full hover:bg-slate-300 dark:hover:bg-slate-600 hover:scale-105 transition-all"
+      >
+        See My Learning Path
+      </a>
+    </div>
+
+  </main>
+</Layout>

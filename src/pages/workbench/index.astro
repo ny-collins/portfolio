@@ -1,0 +1,28 @@
+---
+import { getCollection } from 'astro:content';
+import { slide } from 'astro:transitions';
+import Layout from '../../layouts/Layout.astro';
+import WorkbenchCard from '../../components/WorkbenchCard.astro';
+
+const allProjects = await getCollection('workbench');
+
+const projects = allProjects.sort((a, b) => a.data.order - b.data.order);
+---
+
+<Layout title="Workbench :: Collins">
+  <main 
+    class="max-w-5xl mx-auto p-8"
+    transition:animate={slide({ duration: '0.3s' })}
+  >
+    <h1 class="text-5xl font-bold mb-4">My Workbench</h1>
+    <p class="text-xl text-slate-600 dark:text-slate-300 mb-12">
+      A curated collection of my experiments, explorations, and "chain-reaction" projects.
+    </p>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      {projects.map((project) => (
+        <WorkbenchCard project={project} />
+      ))}
+    </div>
+  </main>
+</Layout>

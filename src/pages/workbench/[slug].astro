@@ -1,0 +1,19 @@
+---
+import { getCollection } from 'astro:content';
+import WorkbenchEntryLayout from '../../layouts/WorkbenchEntryLayout.astro';
+
+export async function getStaticPaths() {
+  const workbenchEntries = await getCollection('workbench');
+  return workbenchEntries.map(entry => ({
+    params: { slug: entry.slug }, 
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await entry.render();
+---
+
+<WorkbenchEntryLayout entry={entry}>
+  <Content />
+</WorkbenchEntryLayout>
