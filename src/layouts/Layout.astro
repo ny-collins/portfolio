@@ -32,12 +32,27 @@ const { title, description = "Collins' Digital Workbench" } = Astro.props;
   				}
   			}
   			
-  			// Apply on initial load
+  			// Apply immediately
   			applyTheme();
   			
-  			// Re-apply on navigation events
-  			document.addEventListener('astro:before-swap', applyTheme);
-  			document.addEventListener('astro:page-load', applyTheme);
+  			// Re-apply on navigation events with multiple strategies
+  			document.addEventListener('astro:before-swap', () => {
+  				requestAnimationFrame(applyTheme);
+  			});
+  			document.addEventListener('astro:page-load', () => {
+  				requestAnimationFrame(applyTheme);
+  			});
+  			
+  			// Fallback: check and apply theme periodically during transitions
+  			let checkCount = 0;
+  			const checkTheme = () => {
+  				applyTheme();
+  				checkCount++;
+  				if (checkCount < 10) { // Check up to 10 times over 1 second
+  					setTimeout(checkTheme, 100);
+  				}
+  			};
+  			document.addEventListener('astro:before-swap', checkTheme);
   		</script>
   		</script>
 
