@@ -19,7 +19,22 @@ const { title, description = "Collins' Digital Workbench" } = Astro.props;
   		<meta name="description" content={description} />
   		<meta name="viewport" content="width=device-width" />
   		<meta name="generator" content={Astro.generator} />
+  		<meta name="google-site-verification" content="zdVZ1S33sjYK8fbzC_MPEwMIDRISvUkH7Z6W_WyGC9o" />
   		<title>{title}</title>
+
+  		<!-- Open Graph / Facebook -->
+  		<meta property="og:type" content="website" />
+  		<meta property="og:url" content="https://collinsmwangi.up.railway.app" />
+  		<meta property="og:title" content={title} />
+  		<meta property="og:description" content={description} />
+  		<meta property="og:image" content="https://collinsmwangi.up.railway.app/images/og-image.png" />
+
+  		<!-- Twitter -->
+  		<meta property="twitter:card" content="summary_large_image" />
+  		<meta property="twitter:url" content="https://collinsmwangi.up.railway.app" />
+  		<meta property="twitter:title" content={title} />
+  		<meta property="twitter:description" content={description} />
+  		<meta property="twitter:image" content="https://collinsmwangi.up.railway.app/images/og-image.png" />
 
   		<script is:inline>
   			(function() {
@@ -73,6 +88,40 @@ const { title, description = "Collins' Digital Workbench" } = Astro.props;
   
   		<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
   		<meta name="theme-color" content="#1e293b" media="(prefers-color-scheme: dark)">
+
+  		<!-- Google Analytics -->
+  		<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  		<script is:inline>
+  			window.dataLayer = window.dataLayer || [];
+  			function gtag(){dataLayer.push(arguments);}
+  			gtag('js', new Date());
+  			gtag('config', 'G-XXXXXXXXXX');
+  		</script>
+
+  		<!-- Structured Data -->
+  		<script type="application/ld+json" is:inline>
+  		{
+  			"@context": "https://schema.org",
+  			"@type": "Person",
+  			"name": "Collins",
+  			"jobTitle": "Systems Explorer & Developer",
+  			"description": "A developer who builds a map of the web, from production backends to modern, local-first PWAs.",
+  			"url": "https://collinsmwangi.up.railway.app",
+  			"sameAs": [
+  				"https://github.com/ny-collins"
+  			],
+  			"knowsAbout": [
+  				"JavaScript",
+  				"Node.js",
+  				"React",
+  				"Astro",
+  				"Svelte",
+  				"TypeScript",
+  				"Web Development",
+  				"Systems Architecture"
+  			]
+  		}
+  		</script>
 	</head>
 
 	<body>
