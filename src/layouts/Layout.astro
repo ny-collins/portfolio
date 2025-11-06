@@ -1,5 +1,5 @@
 ---
-import { ViewTransitions } from 'astro:transitions';
+import { ClientRouter } from 'astro:transitions';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import '../styles/global.css';
@@ -21,8 +21,6 @@ const { title, description = "Collins' Digital Workbench" } = Astro.props;
   		<meta name="generator" content={Astro.generator} />
   		<title>{title}</title>
 
-  		<ViewTransitions />
-
   		<link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
   		<link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
   		<link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
@@ -34,10 +32,14 @@ const { title, description = "Collins' Digital Workbench" } = Astro.props;
 	</head>
 
 	<body>
-    	<Header />
+    	<Header transition:name="header" />
 		
-    	<slot />
+    	<main transition:name="main" transition:animate="slide">
+    		<slot />
+    	</main>
 
-    	<Footer />
+    	<Footer transition:name="footer" />
+
+    	<ClientRouter />
 	</body>
 </html>
