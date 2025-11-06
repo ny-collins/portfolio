@@ -4,7 +4,6 @@
   let theme = 'light';
 
   onMount(() => {
-    // Theme is already applied by inline script, just sync the local variable
     theme = localStorage.getItem('theme') ?? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
   });
 
