@@ -1,15 +1,16 @@
 ---
 title: "Swiftel Site"
-subtitle: "An Astro + Svelte Testbed"
+subtitle: "Marketing Website for Fictional ISP"
 order: 4
 repoUrl: "https://github.com/ny-collins/ny-collins.github.io/tree/main/swiftel"
 liveUrl: "https://ny-collins.github.io/swiftel"
 heroImage: "/images/swiftel.png"
 techStack: ["Astro", "Svelte", "Tailwind CSS", "Markdown"]
-theSpark: "An experiment to build a fast, modern, content-driven marketing website for a fictional ISP. This was my deep dive into Astro."
-keyInsights: [
-  "Mastered Astro's 'Island Architecture.' I learned to build a 0kb-JS-by-default site and then 'hydrate' specific, dynamic Svelte components (like a contact form) where needed.",
-  "Successfully architected a content-driven site using Astro's file-based routing to serve Markdown articles.",
-  "Proved the power of combining Astro (for static content) with Svelte (for interactivity) and Tailwind (for styling)."
+purpose: "A modern, content-driven marketing website for a fictional internet service provider, demonstrating Astro's island architecture and content management capabilities."
+keyOutcomes: [
+  "Mastered Astro's island architecture for optimal performance (0kb JS by default)",
+  "Combined Astro static content with Svelte interactive components",
+  "Implemented file-based routing with Markdown content management",
+  "Created responsive design with Tailwind CSS utility classes"
 ]
 ---

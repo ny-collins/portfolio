@@ -2,8 +2,8 @@
 import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout title="Collins :: Systems Explorer">
-  <main class="max-w-4xl mx-auto px-4 py-16">
+<Layout title="Collins Mwangi :: Systems Explorer">
+  <main class="max-w-4xl mx-auto px-4 py-16 pb-32">
     <section class="text-center mb-20">
       <div class="mb-8">
         <div class="inline-flex items-center gap-2 px-4 py-2 bg-blue-50 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded-full text-sm font-medium mb-6 border border-blue-200 dark:border-blue-800">
@@ -14,11 +14,11 @@ import Layout from '../layouts/Layout.astro';
         </div>
       </div>
 
-      <h1 class="text-5xl md:text-7xl lg:text-8xl font-bold bg-gradient-to-r from-slate-900 via-blue-600 to-purple-600 dark:from-white dark:via-blue-400 dark:to-purple-400 bg-clip-text text-transparent mb-8 leading-tight">
+      <h1 class="text-5xl md:text-7xl lg:text-8xl font-bold bg-gradient-to-r from-slate-900 via-blue-600 to-purple-600 dark:from-white dark:via-blue-400 dark:to-purple-400 bg-clip-text text-transparent mb-8 leading-tight animate-fade-in">
         Systems Explorer
       </h1>
 
-      <p class="text-xl md:text-2xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto leading-relaxed mb-12">
+      <p class="text-xl md:text-2xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto leading-relaxed mb-12 animate-slide-up">
         I build a map of the web, from production backends to modern, local-first PWAs. This is my digital workbench.
       </p>
 
@@ -44,40 +44,40 @@ import Layout from '../layouts/Layout.astro';
       </div>
     </section>
 
-    <section class="grid md:grid-cols-3 gap-8 mb-20">
-      <div class="text-center p-6 bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 rounded-2xl border border-blue-100 dark:border-blue-800">
-        <div class="w-12 h-12 bg-blue-500 rounded-xl flex items-center justify-center mx-auto mb-4">
+        <section class="grid md:grid-cols-3 gap-8 mb-20">
+      <div class="group text-center p-6 bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 rounded-2xl border border-blue-100 dark:border-blue-800 hover:border-blue-300 dark:hover:border-blue-600 transition-all duration-500 hover:-translate-y-2 hover:shadow-xl dark:hover:shadow-blue-500/10 cursor-pointer animate-stagger-1">
+        <div class="w-12 h-12 bg-blue-500 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">
           <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/>
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
           </svg>
         </div>
-        <h3 class="text-lg font-semibold text-slate-900 dark:text-white mb-2">Systems Thinking</h3>
+        <h3 class="text-lg font-semibold text-slate-900 dark:text-white mb-2 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300">Systems Thinking</h3>
         <p class="text-slate-600 dark:text-slate-300 text-sm">Understanding the full ecosystem, not just individual components</p>
       </div>
 
-      <div class="text-center p-6 bg-gradient-to-br from-purple-50 to-pink-50 dark:from-purple-900/20 dark:to-pink-900/20 rounded-2xl border border-purple-100 dark:border-purple-800">
-        <div class="w-12 h-12 bg-purple-500 rounded-xl flex items-center justify-center mx-auto mb-4">
+      <div class="group text-center p-6 bg-gradient-to-br from-purple-50 to-pink-50 dark:from-purple-900/20 dark:to-pink-900/20 rounded-2xl border border-purple-100 dark:border-purple-800 hover:border-purple-300 dark:hover:border-purple-600 transition-all duration-500 hover:-translate-y-2 hover:shadow-xl dark:hover:shadow-purple-500/10 cursor-pointer animate-stagger-2">
+        <div class="w-12 h-12 bg-purple-500 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">
           <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
           </svg>
         </div>
-        <h3 class="text-lg font-semibold text-slate-900 dark:text-white mb-2">Performance First</h3>
+        <h3 class="text-lg font-semibold text-slate-900 dark:text-white mb-2 group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors duration-300">Performance First</h3>
         <p class="text-slate-600 dark:text-slate-300 text-sm">Building fast, efficient, and scalable solutions</p>
       </div>
 
-      <div class="text-center p-6 bg-gradient-to-br from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/20 rounded-2xl border border-green-100 dark:border-green-800">
-        <div class="w-12 h-12 bg-green-500 rounded-xl flex items-center justify-center mx-auto mb-4">
+      <div class="group text-center p-6 bg-gradient-to-br from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/20 rounded-2xl border border-green-100 dark:border-green-800 hover:border-green-300 dark:hover:border-green-600 transition-all duration-500 hover:-translate-y-2 hover:shadow-xl dark:hover:shadow-green-500/10 cursor-pointer animate-stagger-3">
+        <div class="w-12 h-12 bg-green-500 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">
           <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
           </svg>
         </div>
-        <h3 class="text-lg font-semibold text-slate-900 dark:text-white mb-2">Innovation Driven</h3>
+        <h3 class="text-lg font-semibold text-slate-900 dark:text-white mb-2 group-hover:text-green-600 dark:group-hover:text-green-400 transition-colors duration-300">Innovation Driven</h3>
         <p class="text-slate-600 dark:text-slate-300 text-sm">Exploring new technologies and pushing boundaries</p>
       </div>
     </section>
 
-    <section class="text-center">
+    <section class="text-center animate-fade-in" style="animation-delay: 0.8s; animation-fill-mode: both;">
       <div class="prose prose-lg dark:prose-invert max-w-3xl mx-auto">
         <p class="text-lg text-slate-700 dark:text-slate-300 leading-relaxed">
           My curiosity drives me past the "how" into the "why." This site archives my journey of exploration—experiments, chain reactions, and key insights gathered while building with modern tools.

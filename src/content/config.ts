@@ -10,11 +10,25 @@ const workbenchCollection = defineCollection({
     liveUrl: z.string().url().optional(),
     heroImage: z.string(),
     techStack: z.array(z.string()),
-    theSpark: z.string(),
-    keyInsights: z.array(z.string()),
+    purpose: z.string(),
+    keyOutcomes: z.array(z.string()),
+  }),
+});
+
+const blogCollection = defineCollection({
+  type: 'content',
+  schema: z.object({
+    title: z.string(),
+    description: z.string(),
+    publishDate: z.date(),
+    updatedDate: z.date().optional(),
+    tags: z.array(z.string()),
+    readingTime: z.number(),
+    featured: z.boolean().default(false),
   }),
 });
 
 export const collections = {
   'workbench': workbenchCollection,
+  'blog': blogCollection,
 };

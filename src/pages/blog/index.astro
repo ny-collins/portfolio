@@ -1,0 +1,159 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { getCollection } from 'astro:content';
+
+const allPosts = await getCollection('blog');
+const posts = allPosts
+  .filter(({ data }) => data.publishDate <= new Date())
+  .sort((a, b) => b.data.publishDate.getTime() - a.data.publishDate.getTime());
+
+const allTags = [...new Set(posts.flatMap(post => post.data.tags))].sort();
+---
+
+<Layout title="Blog | Collins Mwangi" description="Thoughts, learnings, and discoveries from my development journey">
+  <div class="max-w-6xl mx-auto px-4 py-8">
+    <!-- Header -->
+    <header class="text-center mb-12">
+      <h1 class="text-5xl font-bold text-gray-900 dark:text-white mb-4">
+        Blog
+      </h1>
+      <p class="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+        Documenting my aha-moments, technical discoveries, and lessons learned along the development journey.
+      </p>
+    </header>
+
+    {posts.length > 0 && (
+      <div class="mb-8">
+        <div class="flex flex-wrap justify-center gap-2">
+          <button
+            id="filter-all"
+            class="px-4 py-2 bg-blue-600 text-white rounded-full text-sm font-medium transition-colors filter-btn active"
+            data-tag="all"
+          >
+            All Posts
+          </button>
+          {allTags.map(tag => (
+            <button
+              id={`filter-${tag}`}
+              class="px-4 py-2 bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-full text-sm font-medium transition-colors filter-btn"
+              data-tag={tag}
+            >
+              #{tag}
+            </button>
+          ))}
+        </div>
+      </div>
+    )}
+
+    <div id="posts-container" class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+      {posts.map(post => (
+        <article class="bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
+          <div class="p-6">
+            <!-- Post Meta -->
+            <div class="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-400 mb-3">
+              <time datetime={post.data.publishDate.toISOString()}>
+                {post.data.publishDate.toLocaleDateString('en-US', {
+                  year: 'numeric',
+                  month: 'short',
+                  day: 'numeric'
+                })}
+              </time>
+              <span>•</span>
+              <span>{post.data.readingTime} min</span>
+            </div>
+
+            <h2 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">
+              <a
+                href={`/blog/${post.slug}`}
+                class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+              >
+                {post.data.title}
+              </a>
+            </h2>
+
+            <p class="text-gray-600 dark:text-gray-300 mb-4 line-clamp-3">
+              {post.data.description}
+            </p>
+
+            <div class="flex flex-wrap gap-1 mb-4">
+              {post.data.tags.slice(0, 3).map(tag => (
+                <span class="px-2 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs rounded">
+                  #{tag}
+                </span>
+              ))}
+              {post.data.tags.length > 3 && (
+                <span class="px-2 py-1 bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-400 text-xs rounded">
+                  +{post.data.tags.length - 3} more
+                </span>
+              )}
+            </div>
+
+            <a
+              href={`/blog/${post.slug}`}
+              class="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 text-sm font-medium"
+            >
+              Read more →
+            </a>
+          </div>
+        </article>
+      ))}
+    </div>
+
+    {posts.length === 0 && (
+      <div class="text-center py-12">
+        <div class="text-6xl mb-4">📝</div>
+        <h3 class="text-2xl font-semibold text-gray-900 dark:text-white mb-2">
+          No posts yet
+        </h3>
+        <p class="text-gray-600 dark:text-gray-300">
+          Blog posts are coming soon. Check back later!
+        </p>
+      </div>
+    )}
+  </div>
+</Layout>
+
+<script>
+  function setupTagFiltering() {
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const postsContainer = document.getElementById('posts-container');
+    const allPosts = Array.from(postsContainer?.children || []);
+
+    filterButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        const selectedTag = button.getAttribute('data-tag');
+        filterButtons.forEach(btn => btn.classList.remove('active', 'bg-blue-600', 'text-white'));
+        filterButtons.forEach(btn => btn.classList.add('bg-gray-200', 'dark:bg-gray-700', 'text-gray-700', 'dark:text-gray-300'));
+        button.classList.remove('bg-gray-200', 'dark:bg-gray-700', 'text-gray-700', 'dark:text-gray-300');
+        button.classList.add('active', 'bg-blue-600', 'text-white');
+        allPosts.forEach(post => {
+          const postTags = Array.from(post.querySelectorAll('[data-tag]')).map(el =>
+            el.textContent?.replace('#', '').toLowerCase()
+          );
+
+          if (selectedTag === 'all' || (selectedTag && postTags.includes(selectedTag.toLowerCase()))) {
+            if (post instanceof HTMLElement) {
+              post.style.display = 'block';
+            }
+          } else {
+            if (post instanceof HTMLElement) {
+              post.style.display = 'none';
+            }
+          }
+        });
+      });
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', setupTagFiltering);
+</script>
+
+<style>
+  .line-clamp-3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    line-clamp: 3;
+    overflow: hidden;
+  }
+</style>

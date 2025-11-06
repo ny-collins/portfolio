@@ -12,6 +12,12 @@ export default defineConfig({
     svelte(),
     sitemap()
   ],
+
+  markdown: {
+    // Prevent single line breaks from becoming <br> tags
+    gfm: true,
+  },
+
   vite: {
     optimizeDeps: {
       exclude: ["framer-motion"]
